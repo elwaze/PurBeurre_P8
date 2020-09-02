@@ -2,8 +2,8 @@
 """ populating and updating purbeurre DB from openfoodfacts API."""
 import requests
 
-from purbeurre_off.models import Product
-from purbeurre_off.models import Category
+from pur_beurre.purbeurre_off.models import Product
+from pur_beurre.purbeurre_off.models import Category
 
 from django.core.management.base import BaseCommand
 
