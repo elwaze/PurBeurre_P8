@@ -38,6 +38,21 @@ pip install -r requirements.txt
 *****
 ```
 
+### Testing
+
+#### Coverage
+
+**Remove coverage_html_report folder** to ensure no previous generated files remains.
+
+**.coveragerc** file has been created to finely tune the coverage behavior.
+
+```bash
+cd PurBeurre_P8/pur_beurre
+coverage erase
+coverage run manage.py test --settings=pur_beurre.test_settings
+coverage 
+```
+
 ... to be continued
 
 
