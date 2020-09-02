@@ -1,9 +1,0 @@
-django
-psycopg2
-django_heroku
-dj_database_url
-requests
-coverage
-selenium
-webdriver-manager
-django-selenium-login
