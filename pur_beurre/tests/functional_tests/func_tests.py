@@ -7,7 +7,7 @@ from django.test import LiveServerTestCase
 from django.contrib.auth.models import User
 
 from selenium import webdriver
-from SeleniumLogin import force_login
+from seleniumlogin import force_login
 from webdriver_manager.chrome import ChromeDriverManager
 
 from purbeurre_off.models import Category
