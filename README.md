@@ -21,9 +21,9 @@ Créez une plateforme pour amateurs de Nutella
 
 ### How to use this program
 
-> You can find this program deployed on Heroku : https://elwaze-purbeurre.herokuapp.com/
+You can find this program deployed on Heroku : https://elwaze-purbeurre.herokuapp.com/
 
-> You can also fork this repository :
+You can also fork this repository :
 ```bash
 git clone "https://github.com/elwaze/PurBeurre_P8.git"
 ```
@@ -38,6 +38,11 @@ pip install -r requirements.txt
 DATABASE_URL
 ENV
 SECRET_KEY
+```
+
+> Running the program
+```bash
+manage.py runserver
 ```
 
 ### Testing
