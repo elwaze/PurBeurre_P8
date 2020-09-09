@@ -1,6 +1,6 @@
 from django.test import TestCase
 
-from purbeurre_off.models import Category, Product, ProductManager
+from pur_beurre.purbeurre_off.models import Category, Product, ProductManager
 
 
 class TestProduct(TestCase):

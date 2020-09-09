@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from purbeurre_off.models import Product
+from pur_beurre.purbeurre_off.models import Product
 
 
 def results(request):

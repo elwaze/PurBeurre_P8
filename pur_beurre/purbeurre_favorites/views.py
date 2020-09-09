@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
-from purbeurre_off.models import Product
-from purbeurre_favorites.models import Favorite
+from pur_beurre.purbeurre_off.models import Product
+from pur_beurre.purbeurre_favorites.models import Favorite
 
 
 def favorites(request):

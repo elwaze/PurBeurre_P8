@@ -1,6 +1,6 @@
 from django.db import models
-from purbeurre_off.models import Product
-from purbeurre_user.models import User
+from pur_beurre.purbeurre_off.models import Product
+from pur_beurre.purbeurre_user.models import User
 
 
 class FavoriteManager(models.Manager):

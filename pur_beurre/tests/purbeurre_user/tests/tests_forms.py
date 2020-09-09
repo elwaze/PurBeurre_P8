@@ -2,7 +2,7 @@ from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
 from django.test import TestCase, Client
 
-from purbeurre_user.forms import AccountForm
+from pur_beurre.purbeurre_user.forms import AccountForm
 
 
 class TestUserForms(TestCase):

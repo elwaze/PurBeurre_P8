@@ -1,8 +1,8 @@
 from django.test import TestCase
 import unittest.mock as mock
-from purbeurre_off.management.commands.off_db import Command
-from purbeurre_off.models import Category
-from purbeurre_off.models import Product
+from pur_beurre.purbeurre_off.management.commands.off_db import Command
+from pur_beurre.purbeurre_off.models import Category
+from pur_beurre.purbeurre_off.models import Product
 
 
 class TestCommand(TestCase):

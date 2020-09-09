@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from purbeurre_results import models
+from pur_beurre.purbeurre_results import models
 
 
 @admin.register(models.Result)
