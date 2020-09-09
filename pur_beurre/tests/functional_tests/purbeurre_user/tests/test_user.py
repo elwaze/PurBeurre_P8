@@ -1,7 +1,7 @@
-from pur_beurre.tests.functional_tests.func_tests import USERNAME
-from pur_beurre.tests.functional_tests.func_tests import PASSWORD
-from pur_beurre.tests.functional_tests.func_tests import FIRST_NAME
-from pur_beurre.tests.functional_tests.func_tests import GeneralTestCase
+from tests.functional_tests.func_tests import USERNAME
+from tests.functional_tests.func_tests import PASSWORD
+from tests.functional_tests.func_tests import FIRST_NAME
+from tests.functional_tests.func_tests import GeneralTestCase
 
 
 class AccountTestCase(GeneralTestCase):

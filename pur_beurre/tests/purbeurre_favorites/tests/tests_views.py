@@ -2,8 +2,8 @@ from django.contrib.auth.models import User
 from django.test import TestCase, Client
 from django.urls import reverse
 
-from pur_beurre.purbeurre_favorites.models import Favorite
-from pur_beurre.purbeurre_off.models import Product, Category
+from purbeurre_favorites.models import Favorite
+from purbeurre_off.models import Product, Category
 
 
 class TestFavoritesViews(TestCase):

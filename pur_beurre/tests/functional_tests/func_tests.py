@@ -1,7 +1,7 @@
 import os
 import json
 
-from pur_beurre.tests import TESTS_ROOT
+from tests import TESTS_ROOT
 
 from django.test import LiveServerTestCase
 from django.contrib.auth.models import User
@@ -10,8 +10,8 @@ from selenium import webdriver
 from SeleniumLogin import force_login
 from webdriver_manager.chrome import ChromeDriverManager
 
-from pur_beurre.purbeurre_off.models import Category
-from pur_beurre.purbeurre_off.models import Product
+from purbeurre_off.models import Category
+from purbeurre_off.models import Product
 
 PASSWORD = 'connection'
 FIRST_NAME = 'Selenium'

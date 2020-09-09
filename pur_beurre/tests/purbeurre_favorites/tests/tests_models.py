@@ -1,10 +1,10 @@
 from django.contrib.auth.models import User
 from django.test import TestCase
 
-from pur_beurre.purbeurre_off.models import Category
-from pur_beurre.purbeurre_favorites.models import Favorite
-from pur_beurre.purbeurre_favorites.models import FavoriteManager
-from pur_beurre.purbeurre_favorites.models import Product
+from purbeurre_off.models import Category
+from purbeurre_favorites.models import Favorite
+from purbeurre_favorites.models import FavoriteManager
+from purbeurre_favorites.models import Product
 
 
 class TestFavorite(TestCase):

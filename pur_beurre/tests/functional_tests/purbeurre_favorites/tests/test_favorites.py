@@ -1,4 +1,4 @@
-from pur_beurre.tests.functional_tests.func_tests import GeneralTestCase
+from tests.functional_tests.func_tests import GeneralTestCase
 
 
 class FavoritesTestCase(GeneralTestCase):
