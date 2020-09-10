@@ -38,4 +38,10 @@ class FavoritesTestCase(GeneralTestCase):
         delete_product = self.selenium.find_element_by_id('remove_favorite')
         delete_product.click()
 
-        # TBD
+        error = None
+        try:
+            self.selenium.find_element_by_id('remove_favorite')
+        except Exception as err:
+            error = err
+        self.assertIsNotNone(error)
+        self.assertIsInstance(error, Exception)

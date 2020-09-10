@@ -92,7 +92,6 @@ WSGI_APPLICATION = 'pur_beurre.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-# TODO: Uncomment it for testing locally
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',   # 'postgresql', 'mysql', 'sqlite3', 'oracle'.
