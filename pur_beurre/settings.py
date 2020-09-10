@@ -29,11 +29,11 @@ else:
 
 # SECURITY WARNING: don't run with debug turned on in production!
 if os.environ.get('ENV') == 'PRODUCTION':
-    DEBUG = True
+    DEBUG = False
 else:
     DEBUG = True
 
-ALLOWED_HOSTS = ['.herokuapp.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['.herokuapp.com', 'elwaze-purbeurre.herokuapp.com', 'localhost', '127.0.0.1']
 
 # Application definition
 
@@ -61,11 +61,11 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-if os.environ.get('ENV') == 'PRODUCTION':
-    # ...
-    # Simplified static file serving.
-    # https://warehouse.python.org/project/whitenoise/
-    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# if os.environ.get('ENV') == 'PRODUCTION':
+#     # ...
+#     # Simplified static file serving.
+#     # https://warehouse.python.org/project/whitenoise/
+#     STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 ROOT_URLCONF = 'pur_beurre.urls'
 
@@ -93,24 +93,24 @@ WSGI_APPLICATION = 'pur_beurre.wsgi.application'
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 # TODO: Uncomment it for testing locally
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',   # 'postgresql', 'mysql', 'sqlite3', 'oracle'.
-#         'NAME': 'pur_beurre_p8',
-#         'USER': 'postgres',
-#         'PASSWORD': 'mvtm,js1np',
-#         'HOST': '127.0.0.1',
-#         'PORT': '5433',
-#         'CONN_MAX_AGE': 500,
-#     },
-# }
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',   # 'postgresql', 'mysql', 'sqlite3', 'oracle'.
-        'NAME': os.path.join(BASE_DIR, 'pur_beurre.db'),
+        'ENGINE': 'django.db.backends.postgresql',   # 'postgresql', 'mysql', 'sqlite3', 'oracle'.
+        'NAME': 'pur_beurre_p8',
+        'USER': 'postgres',
+        'PASSWORD': 'mvtm,js1np',
+        'HOST': '127.0.0.1',
+        'PORT': '5433',
+        'CONN_MAX_AGE': 500,
     },
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',   # 'postgresql', 'mysql', 'sqlite3', 'oracle'.
+#         'NAME': os.path.join(BASE_DIR, 'pur_beurre.db'),
+#     },
+# }
 
 if os.environ.get('ENV') == 'PRODUCTION':
     DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
@@ -158,17 +158,17 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
+#
+# if os.environ.get('ENV') == 'PRODUCTION':
+#     MIDDLEWARE.insert(1, 'whitenoise.middleware.WhiteNoiseMiddleware')
 
-if os.environ.get('ENV') == 'PRODUCTION':
-    MIDDLEWARE.insert(1, 'whitenoise.middleware.WhiteNoiseMiddleware')
+# Activate Django-Heroku.
+import django_heroku
+django_heroku.settings(locals())
 
-    # Activate Django-Heroku.
-    import django_heroku
-    django_heroku.settings(locals())
-
-else:
-    STATICFILES_DIRS = (
-        os.path.join(BASE_DIR, 'static'),
-    )
+# else:
+#     STATICFILES_DIRS = (
+#         os.path.join(BASE_DIR, 'static'),
+#     )
 
 
