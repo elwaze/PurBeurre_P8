@@ -21,7 +21,7 @@ agile methodology
 
 ### How to use this program
 
-You can find this program deployed on Heroku : https://elwaze-purbeurre.herokuapp.com/
+You can find this program deployed on Heroku : ******
 
 You can also fork this repository :
 ```bash
@@ -36,13 +36,13 @@ pip install -r requirements.txt
 Setting environment variables 
 ```bash
 DATABASE_URL
-ENV
+ENV="PRODUCTION"
 SECRET_KEY
 ```
 
 Running the program
 ```bash
-manage.py runserver
+python manage.py runserver
 ```
 
 ### Testing
@@ -54,9 +54,9 @@ manage.py runserver
 **.coveragerc** file has been created to finely tune the coverage behavior.
 
 ```bash
-cd PurBeurre_P8/pur_beurre
+cd pur_beurre
 coverage erase
-coverage run manage.py test --settings=pur_beurre.test_settings
+coverage run manage.py test tests.apps --settings=pur_beurre.test_settings
 coverage 
 ```
 
