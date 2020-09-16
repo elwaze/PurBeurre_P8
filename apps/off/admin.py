@@ -10,5 +10,5 @@ class CategoryAdmin(admin.ModelAdmin):
 
 @admin.register(models.Product)
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ('name', 'nutriscore', 'category', 'link',)
+    list_display = ('name', 'nutriscore', 'category', 'link', 'img', 'nutrition_img')
     list_filter = ('category__name',)
