@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 import os
 import dj_database_url
+import django_heroku
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -60,12 +61,6 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-
-# if os.environ.get('ENV') == 'PRODUCTION':
-#     # ...
-#     # Simplified static file serving.
-#     # https://warehouse.python.org/project/whitenoise/
-#     STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 ROOT_URLCONF = 'pur_beurre.urls'
 
@@ -157,17 +152,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
-#
-# if os.environ.get('ENV') == 'PRODUCTION':
-#     MIDDLEWARE.insert(1, 'whitenoise.middleware.WhiteNoiseMiddleware')
 
 # Activate Django-Heroku.
-import django_heroku
 django_heroku.settings(locals())
-
-# else:
-#     STATICFILES_DIRS = (
-#         os.path.join(BASE_DIR, 'static'),
-#     )
-
-
