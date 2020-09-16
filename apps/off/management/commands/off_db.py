@@ -41,7 +41,6 @@ class Command(BaseCommand):
 
         self.stdout.write('updating DB')
         # Category.objects.all().delete()
-        # Product.objects.all().delete()
         api_url = 'https://fr.openfoodfacts.org/categories&json=1'
         request_categories = requests.get(api_url)
         categories_json = request_categories.json()

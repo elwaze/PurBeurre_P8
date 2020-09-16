@@ -9,7 +9,7 @@ class FavoriteManager(models.Manager):
         Used to save a product in the user's favorites.
 
         :param product: product to be saved.
-        :param user: authentified user.
+        :param user: authenticated user.
         """
 
         self.get_or_create(
@@ -22,7 +22,7 @@ class FavoriteManager(models.Manager):
         Used to remove a product from the user's favorites.
 
         :param product: product to be deleted.
-        :param user: authentified user.
+        :param user: authenticated user.
         """
 
         favorite = self.get(
