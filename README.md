@@ -40,6 +40,11 @@ ENV="PRODUCTION"
 SECRET_KEY
 ```
 
+Populating DB
+```bash
+python manage.py off_db
+```
+
 Running the program
 ```bash
 python manage.py runserver
@@ -57,9 +62,5 @@ python manage.py runserver
 cd pur_beurre
 coverage erase
 coverage run manage.py test tests.apps --settings=pur_beurre.test_settings
-coverage 
+coverage h
 ```
-
-... to be continued
-
-

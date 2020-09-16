@@ -4,3 +4,4 @@ __pycache__/
 *.log
 .gitignore
 .coverage
+coverage_html_report/
