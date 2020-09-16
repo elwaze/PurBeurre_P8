@@ -59,8 +59,7 @@ python manage.py runserver
 **.coveragerc** file has been created to finely tune the coverage behavior.
 
 ```bash
-cd pur_beurre
 coverage erase
 coverage run manage.py test tests.apps --settings=pur_beurre.test_settings
-coverage h
+coverage html
 ```
